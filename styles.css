@@ -2128,6 +2128,9 @@ em {
   .desktop-nav-wrap {
     display: none;
   }
+  .btn-header-quote-aurelia {
+    display: none;
+  }
   .mobile-hamburger-btn {
     display: flex;
   }
