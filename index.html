@@ -53,12 +53,12 @@
       <!-- Center Nav Links (Desktop) -->
       <nav class="desktop-nav-wrap">
         <ul class="aurelia-nav-menu">
-          <li><a href="#hero" class="aurelia-nav-link active">Home</a></li>
-          <li><a href="#services" class="aurelia-nav-link">Our Services</a></li>
-          <li><a href="#about" class="aurelia-nav-link">About Us</a></li>
-          <li><a href="#spotlight" class="aurelia-nav-link">Spotlight</a></li>
-          <li><a href="#gallery" class="aurelia-nav-link">Gallery</a></li>
-          <li><a href="#contact-cta" class="aurelia-nav-link">Contact</a></li>
+          <li><a href="index.html" class="aurelia-nav-link active">Home</a></li>
+          <li><a href="services.html" class="aurelia-nav-link">Services &amp; Packages</a></li>
+          <li><a href="fx-lab.html" class="aurelia-nav-link">Stage FX Lab</a></li>
+          <li><a href="about.html" class="aurelia-nav-link">About Us</a></li>
+          <li><a href="gallery.html" class="aurelia-nav-link">Gallery &amp; Stories</a></li>
+          <li><a href="contact.html" class="aurelia-nav-link">Contact</a></li>
         </ul>
       </nav>
 
@@ -82,12 +82,12 @@
     <!-- Mobile Slide-Down Navigation Menu -->
     <div class="mobile-nav-drawer" id="mobile-nav-drawer">
       <ul class="mobile-nav-list">
-        <li><a href="#hero" onclick="toggleMobileNav()">Home</a></li>
-        <li><a href="#services" onclick="toggleMobileNav()">Our Services</a></li>
-        <li><a href="#about" onclick="toggleMobileNav()">About Us</a></li>
-        <li><a href="#spotlight" onclick="toggleMobileNav()">Spotlight</a></li>
-        <li><a href="#gallery" onclick="toggleMobileNav()">Gallery</a></li>
-        <li><a href="#contact-cta" onclick="toggleMobileNav()">Contact Us</a></li>
+        <li><a href="index.html" onclick="toggleMobileNav()">Home</a></li>
+        <li><a href="services.html" onclick="toggleMobileNav()">Services &amp; Packages</a></li>
+        <li><a href="fx-lab.html" onclick="toggleMobileNav()">Stage FX Simulator</a></li>
+        <li><a href="about.html" onclick="toggleMobileNav()">About Aurèlia</a></li>
+        <li><a href="gallery.html" onclick="toggleMobileNav()">Gallery &amp; Case Studies</a></li>
+        <li><a href="contact.html" onclick="toggleMobileNav()">Bespoke Consultation</a></li>
       </ul>
       <button class="btn-terracotta-pill" onclick="toggleMobileNav(); app.openQuoteDrawer();" style="width: 100%; justify-content: center; margin-top: 16px;">
         <span>Build Your Quote &rarr;</span>
@@ -400,7 +400,178 @@
     </div>
   </section>
 
-  <!-- 10. "GET A FREE CONSULTATION / LET'S CREATE SOMETHING BEAUTIFUL" SECTION (Warm Cream Banner with Cursive Script & Arch Card) -->
+  <!-- 10. LUXURY EDITORIAL FAQ SHOWCASE (Interactive Arch Accordion with Category Selector & Live Search) -->
+  <section id="faq-section" class="luxury-faq-section">
+    <div class="container">
+      <div class="faq-header-center">
+        <div class="faq-eyebrow-badge">
+          <span>✦ CURATED ANSWERS ✦</span>
+        </div>
+        <h2 class="faq-main-title">Frequently Asked <em>Questions</em></h2>
+        <p class="faq-main-subtitle">
+          Everything you need to know about our luxury props, indoor safety certifications, delivery logistics, and bespoke setups.
+        </p>
+      </div>
+
+      <!-- FAQ Category Filter Tabs -->
+      <div class="faq-topic-nav-pills" id="faq-topic-tabs">
+        <button class="faq-topic-btn active" onclick="switchFaqTab('all', this)">
+          <span>✨ All Questions</span>
+        </button>
+        <button class="faq-topic-btn" onclick="switchFaqTab('safety', this)">
+          <span>🛡️ Safety &amp; Venue Rules</span>
+        </button>
+        <button class="faq-topic-btn" onclick="switchFaqTab('booking', this)">
+          <span>📦 Rentals &amp; Logistics</span>
+        </button>
+        <button class="faq-topic-btn" onclick="switchFaqTab('custom', this)">
+          <span>🎨 Custom &amp; Styling</span>
+        </button>
+      </div>
+
+      <!-- FAQ Editorial Cards Layout (2 Column Staggered Grid) -->
+      <div class="faq-editorial-grid" id="faq-cards-container">
+        
+        <!-- FAQ 1 (Safety) -->
+        <div class="faq-luxury-card" data-faq-cat="safety">
+          <div class="faq-card-top" onclick="toggleFaqCard(this)">
+            <div class="faq-card-title-wrap">
+              <span class="faq-num">01</span>
+              <h3 class="faq-question">Are Cold Pyro sparkulars safe for indoor ballroom ceilings?</h3>
+            </div>
+            <div class="faq-toggle-icon">
+              <span class="icon-line"></span>
+              <span class="icon-line"></span>
+            </div>
+          </div>
+          <div class="faq-card-answer">
+            <div class="faq-answer-inner">
+              <p>Yes, 100%. Our Sparkular machines utilize non-pyrotechnic titanium composite granules that burn at low temperatures (under 35°C), making the sparks completely touch-safe with zero sulfur smoke and zero odor. They are officially certified and permitted in ballrooms of leading 5-star hotel chains including Taj, Oberoi, Leela, and ITC.</p>
+              <div class="faq-pill-tag">✓ MSDS Lab Certified Non-Hazardous</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 (Safety) -->
+        <div class="faq-luxury-card" data-faq-cat="safety">
+          <div class="faq-card-top" onclick="toggleFaqCard(this)">
+            <div class="faq-card-title-wrap">
+              <span class="faq-num">02</span>
+              <h3 class="faq-question">Will the Heavy Dry-Ice Low Fog trigger hotel fire smoke alarms?</h3>
+            </div>
+            <div class="faq-toggle-icon">
+              <span class="icon-line"></span>
+              <span class="icon-line"></span>
+            </div>
+          </div>
+          <div class="faq-card-answer">
+            <div class="faq-answer-inner">
+              <p>No. We use genuine solid CO2 dry-ice pellets submerged in boiling water, which creates thick, heavy water vapor clouds that hug the floor strictly below knee level. Unlike oily smoke machines, dry-ice fog leaves zero residue, does not rise to ceiling height, and never trips optical smoke detectors.</p>
+              <div class="faq-pill-tag">✓ Pure CO2 Sublimation &bull; Residue-Free</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 (Booking & Logistics) -->
+        <div class="faq-luxury-card" data-faq-cat="booking">
+          <div class="faq-card-top" onclick="toggleFaqCard(this)">
+            <div class="faq-card-title-wrap">
+              <span class="faq-num">03</span>
+              <h3 class="faq-question">How early does your setup and technical crew arrive on event day?</h3>
+            </div>
+            <div class="faq-toggle-icon">
+              <span class="icon-line"></span>
+              <span class="icon-line"></span>
+            </div>
+          </div>
+          <div class="faq-card-answer">
+            <div class="faq-answer-inner">
+              <p>Our transport fleet and certified stage technicians arrive 3 to 4 hours prior to guest arrival. This provides ample buffer time for precision prop placement, floral fluffing, electrical cabling, DMX cue testing, and rehearsals with your stage director or wedding planner.</p>
+              <div class="faq-pill-tag">✓ Guaranteed Pre-Event Sound &amp; FX Check</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 (Booking & Logistics) -->
+        <div class="faq-luxury-card" data-faq-cat="booking">
+          <div class="faq-card-top" onclick="toggleFaqCard(this)">
+            <div class="faq-card-title-wrap">
+              <span class="faq-num">04</span>
+              <h3 class="faq-question">Do you deliver to destination wedding venues outside metropolitan hubs?</h3>
+            </div>
+            <div class="faq-toggle-icon">
+              <span class="icon-line"></span>
+              <span class="icon-line"></span>
+            </div>
+          </div>
+          <div class="faq-card-answer">
+            <div class="faq-answer-inner">
+              <p>Absolutely! We have regional transport hubs in Mumbai, Delhi NCR, Bengaluru, Jaipur, Udaipur, and Goa. We regularly service destination palaces, beachfront resorts, and private farmhouses across India with dedicated shock-proof transit vehicles.</p>
+              <div class="faq-pill-tag">✓ Pan-India Dedicated Fleet Transit</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 5 (Custom & Styling) -->
+        <div class="faq-luxury-card" data-faq-cat="custom">
+          <div class="faq-card-top" onclick="toggleFaqCard(this)">
+            <div class="faq-card-title-wrap">
+              <span class="faq-num">05</span>
+              <h3 class="faq-question">Can we request customized neon lettering, florals, or specific dimensions?</h3>
+            </div>
+            <div class="faq-toggle-icon">
+              <span class="icon-line"></span>
+              <span class="icon-line"></span>
+            </div>
+          </div>
+          <div class="faq-card-answer">
+            <div class="faq-answer-inner">
+              <p>Yes! Our in-house design atelier offers custom acrylic neon fabrication, bespoke initials in 4-foot Edison marquee letters, and customized palette matching for floral arches to match your planner’s moodboard precisely.</p>
+              <div class="faq-pill-tag">✓ Bespoke Moodboard Fabrication</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 6 (Custom & Styling) -->
+        <div class="faq-luxury-card" data-faq-cat="custom">
+          <div class="faq-card-top" onclick="toggleFaqCard(this)">
+            <div class="faq-card-title-wrap">
+              <span class="faq-num">06</span>
+              <h3 class="faq-question">What is included with the Vintage Touchscreen Photo Booth rental?</h3>
+            </div>
+            <div class="faq-toggle-icon">
+              <span class="icon-line"></span>
+              <span class="icon-line"></span>
+            </div>
+          </div>
+          <div class="faq-card-answer">
+            <div class="faq-answer-inner">
+              <p>Each photo booth rental includes the solid teak wood kiosk, studio Canon DSLR camera, dimmable ring light, high-speed instant 4x6 dye-sublimation printer with unlimited prints, customized couple monogram overlay, vintage props trunk, and a dressed on-site booth host.</p>
+              <div class="faq-pill-tag">✓ Unlimited Prints &bull; Digital QR Gallery</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom FAQ Support Pill -->
+      <div class="faq-bottom-concierge-bar">
+        <div class="concierge-left-info">
+          <div class="concierge-avatar-ring">💬</div>
+          <div>
+            <strong>Have a unique venue question or custom timeline?</strong>
+            <span>Our senior logistics directors reply in under 15 minutes on WhatsApp.</span>
+          </div>
+        </div>
+        <a href="https://wa.me/919876543210?text=Hello%20AURÈLIA,%20I%20have%20a%20question%20about%20event%20props%20and%20safety." target="_blank" rel="noopener" class="btn-faq-whatsapp">
+          <span>Chat with Director &rarr;</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 11. "GET A FREE CONSULTATION / LET'S CREATE SOMETHING BEAUTIFUL" SECTION (Warm Cream Banner with Cursive Script & Arch Card) -->
   <section id="contact-cta" class="consultation-banner-section">
     <div class="container consultation-inner-grid">
       
@@ -445,11 +616,12 @@
       </div>
 
       <ul class="footer-nav-menu">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#spotlight">Spotlight</a></li>
-        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="fx-lab.html">Stage FX Lab</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
         <li><a href="javascript:void(0)" onclick="app.openQuoteDrawer()">Get Quote</a></li>
       </ul>
 
@@ -550,5 +722,46 @@
   <!-- Scripts -->
   <script src="data/products.js"></script>
   <script src="app.js"></script>
+  <script>
+    function toggleFaqCard(headerEl) {
+      const card = headerEl.closest('.faq-luxury-card');
+      if (!card) return;
+      
+      const isOpen = card.classList.contains('active');
+      
+      // Close other cards in same column/grid for clean editorial flow
+      document.querySelectorAll('.faq-luxury-card').forEach(c => {
+        if (c !== card) c.classList.remove('active');
+      });
+
+      if (!isOpen) {
+        card.classList.add('active');
+      } else {
+        card.classList.remove('active');
+      }
+    }
+
+    function switchFaqTab(topic, btnEl) {
+      document.querySelectorAll('#faq-topic-tabs .faq-topic-btn').forEach(b => b.classList.remove('active'));
+      if (btnEl) btnEl.classList.add('active');
+
+      const cards = document.querySelectorAll('.faq-luxury-card');
+      cards.forEach(c => {
+        const cat = c.getAttribute('data-faq-cat');
+        if (topic === 'all' || cat === topic) {
+          c.style.display = 'flex';
+          c.style.animation = 'fadeInFaq 0.4s ease forwards';
+        } else {
+          c.style.display = 'none';
+        }
+      });
+    }
+
+    // Open first FAQ card by default for engagement
+    window.addEventListener('DOMContentLoaded', () => {
+      const firstCard = document.querySelector('.faq-luxury-card');
+      if (firstCard) firstCard.classList.add('active');
+    });
+  </script>
 </body>
 </html>

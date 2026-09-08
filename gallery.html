@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Setups &amp; Visual Showcase Gallery | AURÈLIA</title>
+  <meta name="description" content="Explore real destination wedding mandaps, celebrity concert stage reveals, VIP cocktail lounges, and photo booth setups across India." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="inner-page-body">
+
+  <!-- 1. Top Announcement Strip -->
+  <div class="aurelia-banner-strip">
+    <div class="banner-ticker-track">
+      <div class="banner-ticker-item"><span>📸</span> Real Celebrations, Real Memories Across India</div>
+      <div class="banner-ticker-bullet">✦</div>
+      <div class="banner-ticker-item"><span>✨</span> High Definition Setup Showcase</div>
+      <div class="banner-ticker-bullet">✦</div>
+      <div class="banner-ticker-item"><span>🌿</span> Fullscreen High-Resolution Inspection</div>
+      <div class="banner-ticker-bullet">✦</div>
+      <!-- Marquee Duplicate -->
+      <div class="banner-ticker-item"><span>📸</span> Real Celebrations, Real Memories Across India</div>
+      <div class="banner-ticker-bullet">✦</div>
+      <div class="banner-ticker-item"><span>✨</span> High Definition Setup Showcase</div>
+    </div>
+  </div>
+
+  <!-- 2. Header Navigation -->
+  <header class="aurelia-header">
+    <div class="container header-inner">
+      <a href="index.html" class="aurelia-logo">
+        <svg class="logo-icon-svg" viewBox="0 0 24 24">
+          <path d="M12 2C12 2 14 7 18 9C14 10.5 12 16 12 16C12 16 10 10.5 6 9C10 7 12 2 12 2Z"/>
+          <path d="M12 16C12 16 13.5 19 16 20C13.5 21 12 23 12 23C12 23 10.5 21 8 20C10.5 19 12 16 12 16Z" opacity="0.6"/>
+          <circle cx="5" cy="15" r="1.5"/>
+          <circle cx="19" cy="15" r="1.5"/>
+        </svg>
+        <span class="aurelia-brand-name">A U R È L I A</span>
+        <span class="aurelia-brand-sub">EVENTS &amp; PROPS</span>
+      </a>
+
+      <nav class="desktop-nav-wrap">
+        <ul class="aurelia-nav-menu">
+          <li><a href="index.html" class="aurelia-nav-link">Home</a></li>
+          <li><a href="services.html" class="aurelia-nav-link">Services</a></li>
+          <li><a href="fx-lab.html" class="aurelia-nav-link">Stage FX Lab</a></li>
+          <li><a href="about.html" class="aurelia-nav-link">About Us</a></li>
+          <li><a href="gallery.html" class="aurelia-nav-link active">Gallery</a></li>
+          <li><a href="contact.html" class="aurelia-nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right-actions">
+        <button class="btn-header-quote-aurelia" onclick="app.openQuoteDrawer()">
+          <span>Get Quote</span>
+          <span>&rarr;</span>
+          <span id="cart-badge" style="background: var(--bg-emerald-deep); color: #fff; font-size: 0.72rem; padding: 2px 7px; border-radius: 9999px; margin-left: 4px;">0</span>
+        </button>
+
+        <button class="mobile-hamburger-btn" onclick="toggleMobileNav()" aria-label="Toggle Mobile Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-Down Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" onclick="toggleMobileNav()">Home</a></li>
+        <li><a href="services.html" onclick="toggleMobileNav()">Services &amp; Catalog</a></li>
+        <li><a href="fx-lab.html" onclick="toggleMobileNav()">Interactive FX Lab</a></li>
+        <li><a href="about.html" onclick="toggleMobileNav()">About Us</a></li>
+        <li><a href="gallery.html" onclick="toggleMobileNav()">Event Gallery</a></li>
+        <li><a href="contact.html" onclick="toggleMobileNav()">Contact &amp; Bookings</a></li>
+      </ul>
+      <button class="btn-terracotta-pill" onclick="toggleMobileNav(); app.openQuoteDrawer();" style="width: 100%; justify-content: center; margin-top: 16px;">
+        <span>Build Your Quote &rarr;</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Header for Gallery -->
+  <section class="page-hero-banner gallery-hero">
+    <div class="page-hero-bg-overlay"></div>
+    <div class="container page-hero-content">
+      <span class="eyebrow-pill-tag">VISUAL ARCHIVES</span>
+      <h1 class="page-hero-title">Real Setups &amp; <em>Signature Moments</em></h1>
+      <p class="page-hero-subtitle">
+        Browse high-definition captures of our architectural arches, low-fog bridal walks, warm candlelit dining setups, and bespoke illuminated statement letters.
+      </p>
+    </div>
+  </section>
+
+  <!-- Dedicated Filterable Gallery Grid Section -->
+  <section class="dedicated-gallery-section" style="border-top: none; padding-top: 40px;">
+    <div class="container">
+      
+      <!-- Filter Tabs -->
+      <div class="gallery-filter-tabs-row" id="gallery-filter-tabs">
+        <button class="gallery-filter-btn active" onclick="app.filterGalleryCategory('all', this)">All Portfolios</button>
+        <button class="gallery-filter-btn" onclick="app.filterGalleryCategory('decor-backdrops', this)">Decor &amp; Backdrops</button>
+        <button class="gallery-filter-btn" onclick="app.filterGalleryCategory('cold-pyro', this)">Special Effects &amp; Smoke</button>
+        <button class="gallery-filter-btn" onclick="app.filterGalleryCategory('photo-booth', this)">Photo Booths</button>
+        <button class="gallery-filter-btn" onclick="app.filterGalleryCategory('props-signage', this)">Marquee &amp; Neon</button>
+        <button class="gallery-filter-btn" onclick="app.filterGalleryCategory('lounge-seating', this)">VIP Lounge</button>
+      </div>
+
+      <!-- Main Masonry Grid -->
+      <div class="dedicated-gallery-grid" id="dedicated-gallery-grid" style="margin-top: 40px;">
+        <!-- Rendered via app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Real Event Case Studies -->
+  <section class="case-studies-section">
+    <div class="container">
+      <div class="section-title-center">
+        <span class="gallery-eyebrow-dark">FEATURED RECAPS</span>
+        <h2 class="dedicated-gallery-title">Memorable Destination Events</h2>
+      </div>
+
+      <div class="case-studies-grid">
+        <div class="case-study-card">
+          <div class="case-study-img">
+            <img src="images/products/ChatGPT Image Sep 8, 2026, 03_12_28 PM.png" alt="Grand Dining Canopy" />
+          </div>
+          <div class="case-study-body">
+            <span class="case-location">📍 The Leela Palace, Udaipur</span>
+            <h3>Royal Sangeet &amp; Banquet Night</h3>
+            <p>Complete sheer ivory canopy spanned over 80 feet with 200+ amber Edison bulbs and heavy low fog for the sangeet couple dance.</p>
+          </div>
+        </div>
+
+        <div class="case-study-card">
+          <div class="case-study-img">
+            <img src="images/products/ChatGPT Image Sep 8, 2026, 03_02_01 PM.png" alt="Luxury Floral Arch" />
+          </div>
+          <div class="case-study-body">
+            <span class="case-location">📍 Alila Diwa, South Goa</span>
+            <h3>Sunset Beachfront Vows</h3>
+            <p>Bespoke botanical crescent arch with lush hydrangeas, paired with 4 indoor-safe cold spark fountains during sunset vows.</p>
+          </div>
+        </div>
+
+        <div class="case-study-card">
+          <div class="case-study-img">
+            <img src="images/products/ChatGPT Image Sep 8, 2026, 03_11_18 PM.png" alt="VIP Velvet Lounge" />
+          </div>
+          <div class="case-study-body">
+            <span class="case-location">📍 Taj Lands End, Mumbai</span>
+            <h3>Celebrity Afterparty &amp; Lounge</h3>
+            <p>French scalloped ivory velvet sofas with gold nesting tables and custom neon script photo wall backdrop.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="aurelia-footer">
+    <div class="container footer-bar-inner">
+      <div class="footer-brand-aurelia">
+        <div class="aurelia-brand-name">A U R È L I A</div>
+        <div style="font-size: 0.55rem; letter-spacing: 2.5px; color: var(--text-dark-muted); text-transform: uppercase;">EVENTS &amp; PROPS &copy; 2026</div>
+      </div>
+
+      <ul class="footer-nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="fx-lab.html">Stage FX Lab</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="javascript:void(0)" onclick="app.openQuoteDrawer()">Get Quote</a></li>
+      </ul>
+
+      <div class="footer-social-icons">
+        <a href="#" aria-label="Website"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-out Quote Builder Drawer -->
+  <div class="drawer-overlay-aurelia" id="drawer-overlay" onclick="app.closeQuoteDrawer()"></div>
+  <aside class="quote-drawer-aurelia" id="quote-drawer-evoria">
+    <div class="drawer-head-aurelia">
+      <div>
+        <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--text-dark);">Your Rental Quote</h3>
+        <span style="font-size: 0.72rem; color: var(--text-dark-muted); text-transform: uppercase; letter-spacing: 1px;">AURÈLIA EVENTS &amp; PROPS</span>
+      </div>
+      <button onclick="app.closeQuoteDrawer()" style="background:none; border:none; font-size: 1.6rem; cursor:pointer;">&times;</button>
+    </div>
+
+    <div class="drawer-body-aurelia">
+      <div id="drawer-items-list"></div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px; padding: 16px; background: #FFFFFF; border-radius: 12px; border: 1px solid var(--border-cream);">
+        <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.5px;">Event Date &amp; City</label>
+        <input type="date" id="evoria-event-date" style="padding: 10px 12px; border: 1px solid var(--border-cream); border-radius: 8px; font-family: inherit; font-size: 0.85rem;" />
+        <input type="text" id="evoria-event-city" placeholder="e.g. Mumbai, Delhi, Jaipur, Goa" style="padding: 10px 12px; border: 1px solid var(--border-cream); border-radius: 8px; font-family: inherit; font-size: 0.85rem;" />
+      </div>
+
+      <div style="padding: 16px; background: #FFFFFF; border-radius: 12px; border: 1px solid var(--border-cream);">
+        <label style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
+          <div>
+            <strong style="font-size: 0.88rem; color: var(--text-dark); display: block;">Include On-Site Technician</strong>
+            <span style="font-size: 0.75rem; color: var(--text-dark-muted);">Delivery, setup &amp; cue firing (+₹2,500)</span>
+          </div>
+          <input type="checkbox" id="evoria-tech-check" checked onchange="app.toggleTechnician(this.checked)" style="width: 18px; height: 18px; accent-color: var(--color-terracotta);" />
+        </label>
+      </div>
+    </div>
+
+    <div class="drawer-foot-aurelia" id="drawer-summary-area">
+      <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-dark-muted);">
+        <span>Equipment Subtotal:</span>
+        <span id="summary-equip-val">₹0</span>
+      </div>
+      <div style="display: flex; justify-content: space-between; font-family: var(--font-serif); font-size: 1.4rem; font-weight: 600; color: var(--text-dark); padding-top: 8px; border-top: 1px solid var(--border-cream);">
+        <span>Estimated Total:</span>
+        <span id="summary-grand-val">₹0</span>
+      </div>
+      <button class="btn-terracotta-pill" onclick="app.sendWhatsAppQuote()" style="width: 100%; justify-content: center;">
+        <span>Confirm on WhatsApp &rarr;</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Fullscreen Lightbox Modal -->
+  <div id="gallery-lightbox-modal" class="lightbox-modal">
+    <button class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Close Lightbox">&times;</button>
+    <button class="lightbox-arrow-btn prev" onclick="prevLightboxSlide()" aria-label="Previous Image">&#10094;</button>
+    <button class="lightbox-arrow-btn next" onclick="nextLightboxSlide()" aria-label="Next Image">&#10095;</button>
+    
+    <div class="lightbox-content-wrap">
+      <img id="lightbox-main-img" src="" alt="Full Showcase View" />
+      <div class="lightbox-details-box">
+        <span class="lightbox-cat" id="lightbox-item-cat">Decor &amp; Backdrops</span>
+        <h3 class="lightbox-title" id="lightbox-item-title">Product Name</h3>
+        <p class="lightbox-desc" id="lightbox-item-desc">Product description and specs.</p>
+        <div class="lightbox-action-row">
+          <span class="lightbox-price" id="lightbox-item-price">₹0</span>
+          <button class="btn-header-quote-aurelia" onclick="addCurrentLightboxToQuote()">
+            <span>Add to Quote &rarr;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp & Scroll-to-Top -->
+  <a href="https://wa.me/919876543210?text=Hello%20AURÈLIA,%20I%20would%20like%20to%20inquire%20about%20your%20portfolio%20gallery." target="_blank" rel="noopener" class="floating-whatsapp-pill" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2M12.04 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.04 3.67M9.53 7.64C9.36 7.64 9.09 7.7 8.87 7.93C8.65 8.16 8.03 8.74 8.03 9.92C8.03 11.1 8.89 12.24 9.01 12.4C9.13 12.56 10.67 15.06 13.11 16C15.14 16.79 15.55 16.63 16 16.59C16.45 16.55 17.43 16 17.63 15.43C17.84 14.86 17.84 14.37 17.78 14.27C17.72 14.17 17.56 14.11 17.3 13.98C17.04 13.85 15.76 13.22 15.52 13.13C15.28 13.04 15.11 13 14.94 13.26C14.77 13.52 14.29 14.11 14.14 14.27C14 14.44 13.85 14.46 13.59 14.33C13.33 14.2 12.49 13.92 11.5 13.04C10.73 12.35 10.21 11.5 10.08 11.28C9.95 11.06 10.07 10.94 10.2 10.81C10.32 10.69 10.46 10.5 10.6 10.34C10.74 10.18 10.79 10.06 10.87 9.89C10.95 9.72 10.91 9.58 10.85 9.45C10.79 9.32 10.32 8.12 10.11 7.64C9.9 7.16 9.71 7.23 9.53 7.64Z"/>
+    </svg>
+    <span>Instant Inquiry</span>
+  </a>
+
+  <button id="btn-scroll-top" class="scroll-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Scroll to Top">
+    &uarr;
+  </button>
+
+  <!-- Scripts -->
+  <script src="data/products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
