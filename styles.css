@@ -171,6 +171,8 @@ em {
   align-items: flex-start;
   text-decoration: none;
   gap: 2px;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .logo-icon-svg {
@@ -187,6 +189,7 @@ em {
   color: #FFFFFF;
   line-height: 1;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .aurelia-brand-sub {
@@ -194,6 +197,7 @@ em {
   letter-spacing: 3px;
   color: var(--text-light-muted);
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .aurelia-nav-menu {
@@ -263,9 +267,7 @@ em {
    ========================================================================== */
 .hero-banners-section {
   position: relative;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
+  width: 100%;
   background-color: #0E1A14;
   overflow: hidden;
 }
