@@ -482,7 +482,7 @@ function resetHeroSliderTimer() {
   if (heroSliderTimer) clearInterval(heroSliderTimer);
   heroSliderTimer = setInterval(() => {
     nextHeroSlide();
-  }, 5000);
+  }, 4500);
 }
 
 // ---------------------------------------------------------------------------
@@ -495,9 +495,66 @@ function toggleMobileNav() {
   btn?.classList.toggle('active');
 }
 
+// ---------------------------------------------------------------------------
+// Auto-Slide Timers Configuration (All Sliders)
+// ---------------------------------------------------------------------------
+let servicesSliderTimer = null;
+let gallerySliderTimer = null;
+
+function startAllAutoSliders() {
+  resetHeroSliderTimer();
+  resetServicesSliderTimer();
+  resetGallerySliderTimer();
+  setupSliderHoverListeners();
+}
+
+function resetServicesSliderTimer() {
+  if (servicesSliderTimer) clearInterval(servicesSliderTimer);
+  servicesSliderTimer = setInterval(() => {
+    nextServicesSlide();
+  }, 3500);
+}
+
+function resetGallerySliderTimer() {
+  if (gallerySliderTimer) clearInterval(gallerySliderTimer);
+  gallerySliderTimer = setInterval(() => {
+    nextGallerySlide();
+  }, 4000);
+}
+
+function setupSliderHoverListeners() {
+  // Hero slider hover pause
+  const heroContainer = document.querySelector('.hero-slider-container');
+  if (heroContainer) {
+    heroContainer.addEventListener('mouseenter', () => clearInterval(heroSliderTimer));
+    heroContainer.addEventListener('mouseleave', resetHeroSliderTimer);
+  }
+
+  // Services slider hover pause
+  const servicesViewport = document.querySelector('.services-slider-viewport');
+  if (servicesViewport) {
+    servicesViewport.addEventListener('mouseenter', () => clearInterval(servicesSliderTimer));
+    servicesViewport.addEventListener('mouseleave', resetServicesSliderTimer);
+  }
+
+  // Spotlight Gallery slider hover pause
+  const galleryViewport = document.querySelector('.gallery-arches-viewport');
+  if (galleryViewport) {
+    galleryViewport.addEventListener('mouseenter', () => clearInterval(gallerySliderTimer));
+    galleryViewport.addEventListener('mouseleave', resetGallerySliderTimer);
+  }
+}
+
+// Window resize handler for all sliders
+window.addEventListener('resize', () => {
+  updateServicesSliderPosition();
+  updateGallerySliderPosition();
+});
+
 let app;
 window.addEventListener('DOMContentLoaded', () => {
   app = new EvoriaApp();
-  resetHeroSliderTimer();
+  startAllAutoSliders();
 });
+
 
