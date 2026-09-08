@@ -303,12 +303,8 @@ em {
 .hero-image-slide img {
   width: 100%;
   height: auto;
-  min-height: 220px;
-  max-height: 80vh; /* Scaled for 8% bottom stretch */
-  transform: scaleY(1.08); /* Stretched 8% from bottom */
-  transform-origin: top center;
-  object-fit: cover;
   display: block;
+  object-fit: cover;
 }
 
 .hero-slide-nav {
