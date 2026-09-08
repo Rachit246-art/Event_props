@@ -2250,16 +2250,89 @@ em {
     height: 190px;
   }
 
-  /* About Us */
+  /* About Us Section Mobile Refinement */
+  .about-moments-section {
+    padding: 60px 0;
+  }
+  .about-moments-grid {
+    border-radius: 24px;
+  }
   .about-emerald-content {
-    padding: 40px 24px;
+    padding: 36px 20px 32px;
+  }
+  .about-bg-watermark {
+    font-size: 4.5rem;
+    top: 10px;
+    right: -10px;
+  }
+  .about-eyebrow-wrap {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .about-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
   }
   .about-headline {
-    font-size: 2.1rem;
+    font-size: 1.85rem;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .about-desc {
+    font-size: 0.84rem;
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+  .about-action-row {
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .btn-about-story {
+    padding: 10px 22px;
+    font-size: 0.72rem;
   }
   .about-metrics-row {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 10px;
+    padding-top: 20px;
+  }
+  .metric-item {
+    padding: 10px 8px;
+  }
+  .metric-number {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+  }
+  .metric-label {
+    font-size: 0.64rem;
+  }
+  .about-visual-side {
+    min-height: 320px;
+  }
+  .about-round-seal {
+    width: 100px;
+    height: 100px;
+    border-width: 3px;
+  }
+  .seal-inner-circle {
+    width: 82px;
+    height: 82px;
+  }
+  .seal-flower-icon {
+    width: 14px;
+    height: 14px;
+    margin-bottom: 2px;
+  }
+  .seal-text-inner {
+    font-size: 0.48rem;
+    letter-spacing: 1px;
+    line-height: 1.25;
+  }
+  .about-floating-chip {
+    bottom: 14px;
+    right: 14px;
+    padding: 6px 12px;
+    font-size: 0.65rem;
   }
 
   /* Process Timeline */
@@ -2426,6 +2499,28 @@ em {
   .step-desc {
     font-size: 0.72rem;
     max-width: 140px;
+  }
+  .about-headline {
+    font-size: 1.65rem !important;
+  }
+  .about-emerald-content {
+    padding: 30px 16px 28px !important;
+  }
+  .about-metrics-row {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+  .metric-item {
+    padding: 8px 6px !important;
+  }
+  .metric-number {
+    font-size: 1.35rem !important;
+  }
+  .metric-label {
+    font-size: 0.6rem !important;
+  }
+  .about-visual-side {
+    min-height: 280px !important;
   }
   .dedicated-gallery-grid {
     grid-template-columns: 1fr;
