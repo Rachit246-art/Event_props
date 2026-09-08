@@ -102,9 +102,9 @@ em {
 .aurelia-banner-strip {
   background-color: #0B1611;
   color: #E2DDD5;
-  padding: 5px 0;
+  padding: 6.5px 0; /* Increased length by 7% */
   overflow: hidden;
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 500;
@@ -127,11 +127,11 @@ em {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 0 16px;
+  padding: 0 18px;
 }
 
 .banner-ticker-item span {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
 }
 
 .banner-ticker-bullet {
@@ -161,8 +161,8 @@ em {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 12.5px; /* Increased length/height by 7% */
+  padding-bottom: 12.5px;
 }
 
 .aurelia-logo {
@@ -2176,11 +2176,15 @@ em {
 
   /* Announcement Ticker */
   .aurelia-banner-strip {
-    font-size: 0.65rem;
-    padding: 4px 0;
+    font-size: 0.68rem;
+    padding: 5.5px 0;
   }
 
   /* Header */
+  .header-inner {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
   .aurelia-brand-name {
     font-size: 1.1rem;
     letter-spacing: 3px;
@@ -2190,7 +2194,7 @@ em {
     letter-spacing: 2px;
   }
   .btn-header-quote-aurelia {
-    padding: 6px 14px;
+    padding: 7px 15px;
     font-size: 0.75rem;
   }
 
