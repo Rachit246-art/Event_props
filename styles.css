@@ -2207,14 +2207,32 @@ em {
 
 @media (max-width: 480px) {
   .trust-features-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .trust-feat-item {
+    padding: 10px 12px;
   }
   .service-arch-pill-card {
     min-width: 140px;
   }
   .process-steps-timeline {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 14px;
+  }
+  .step-circle-icon {
+    width: 58px;
+    height: 58px;
+  }
+  .step-circle-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  .step-name {
+    font-size: 1.1rem;
+  }
+  .step-desc {
+    font-size: 0.72rem;
   }
   .dedicated-gallery-grid {
     grid-template-columns: 1fr;
