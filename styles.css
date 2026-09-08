@@ -2089,7 +2089,8 @@ em {
   /* Process Timeline */
   .process-steps-timeline {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px 16px;
+    gap: 28px 16px;
+    max-width: 500px;
   }
   .process-wave-line {
     display: none;
@@ -2217,22 +2218,25 @@ em {
     min-width: 140px;
   }
   .process-steps-timeline {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px 14px;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px 12px;
+    max-width: 100%;
   }
   .step-circle-icon {
-    width: 58px;
-    height: 58px;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 12px;
   }
   .step-circle-icon svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
   .step-name {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
   .step-desc {
     font-size: 0.72rem;
+    max-width: 140px;
   }
   .dedicated-gallery-grid {
     grid-template-columns: 1fr;
