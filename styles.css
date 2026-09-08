@@ -303,7 +303,10 @@ em {
 .hero-image-slide img {
   width: 100%;
   height: auto;
-  max-height: 75vh;
+  min-height: 220px;
+  max-height: 84vh; /* Increased height by 12% */
+  transform: scaleY(1.12); /* Stretched 12% from bottom */
+  transform-origin: top center;
   object-fit: cover;
   display: block;
 }
@@ -344,7 +347,7 @@ em {
 
 .hero-slide-indicators {
   position: absolute;
-  bottom: 20px;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -372,9 +375,11 @@ em {
    4. TOP TRUST FEATURE BADGES BAR (4 CARDS)
    ========================================================================== */
 .trust-features-bar {
-  padding: 24px 0;
+  padding: 30px 0;
   background-color: var(--bg-cream-main);
   border-bottom: 1px solid var(--border-cream);
+  position: relative;
+  z-index: 5;
 }
 
 .trust-features-container {
@@ -386,32 +391,48 @@ em {
 .trust-feat-item {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 10px 14px;
-  border-radius: 12px;
-  transition: transform var(--transition-smooth);
+  gap: 16px;
+  padding: 14px 18px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid rgba(196, 151, 90, 0.25);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+  transition: all var(--transition-smooth);
 }
 
 .trust-feat-item:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  border-color: var(--color-gold);
 }
 
 .trust-feat-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
   background: var(--bg-cream-card);
-  border: 1px solid rgba(196, 151, 90, 0.3);
+  border: 1px solid rgba(196, 151, 90, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.trust-feat-item:hover .trust-feat-icon {
+  background: var(--color-terracotta);
+  border-color: var(--color-terracotta);
 }
 
 .trust-feat-icon svg {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   fill: var(--text-dark);
+  transition: fill 0.3s ease;
+}
+
+.trust-feat-item:hover .trust-feat-icon svg {
+  fill: #FFFFFF;
 }
 
 .trust-feat-content {
@@ -420,9 +441,9 @@ em {
 }
 
 .trust-feat-title {
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.8px;
+  letter-spacing: 1px;
   color: var(--text-dark);
   text-transform: uppercase;
 }
