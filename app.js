@@ -545,10 +545,16 @@ function setupSliderHoverListeners() {
   }
 }
 
-// Window resize handler for all sliders
-window.addEventListener('resize', () => {
-  updateServicesSliderPosition();
-  updateGallerySliderPosition();
+// Window scroll handler for Scroll-to-top button
+window.addEventListener('scroll', () => {
+  const scrollBtn = document.getElementById('btn-scroll-top');
+  if (scrollBtn) {
+    if (window.scrollY > 350) {
+      scrollBtn.classList.add('visible');
+    } else {
+      scrollBtn.classList.remove('visible');
+    }
+  }
 });
 
 let app;
