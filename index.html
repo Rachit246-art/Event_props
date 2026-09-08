@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURÈLIA | Luxury Event Props & Special Effects Rental</title>
+  <meta name="description" content="Everything You Need for a Perfect Celebration. Premium event props, decor elements, special effects, and curated rentals for extraordinary experiences." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- 1. Topmost Announcement Sliding Strip -->
+  <div class="aurelia-banner-strip">
+    <div class="banner-ticker-track">
+      <div class="banner-ticker-item"><span>✨</span> 2026-2027 Wedding & Luxury Event Bookings Now Open</div>
+      <div class="banner-ticker-bullet">✦</div>
+      <div class="banner-ticker-item"><span>🌿</span> 100% Touch-Safe Indoor Cold Pyro Sparkulars</div>
+      <div class="banner-ticker-bullet">✦</div>
+      <div class="banner-ticker-item"><span>☁️</span> Heavy Dry-Ice Low Fog "Cloud Walk" for Bridal Entries</div>
+      <div class="banner-ticker-bullet">✦</div>
+      <div class="banner-ticker-item"><span>🚚</span> Pan India Delivery & Certified On-Site Operators</div>
+      <div class="banner-ticker-bullet">✦</div>
+      <div class="banner-ticker-item"><span>🛡️</span> 5-Star Hotel & Banquet Venue Compliant MSDS Safety</div>
+      <div class="banner-ticker-bullet">✦</div>
+      <!-- Marquee Duplicate -->
+      <div class="banner-ticker-item"><span>✨</span> 2026-2027 Wedding & Luxury Event Bookings Now Open</div>
+      <div class="banner-ticker-bullet">✦</div>
+      <div class="banner-ticker-item"><span>🌿</span> 100% Touch-Safe Indoor Cold Pyro Sparkulars</div>
+      <div class="banner-ticker-bullet">✦</div>
+      <div class="banner-ticker-item"><span>☁️</span> Heavy Dry-Ice Low Fog "Cloud Walk" for Bridal Entries</div>
+      <div class="banner-ticker-bullet">✦</div>
+      <div class="banner-ticker-item"><span>🚚</span> Pan India Delivery & Certified On-Site Operators</div>
+      <div class="banner-ticker-bullet">✦</div>
+      <div class="banner-ticker-item"><span>🛡️</span> 5-Star Hotel & Banquet Venue Compliant MSDS Safety</div>
+    </div>
+  </div>
+
+  <!-- 2. Menu Bar Header -->
+  <header class="aurelia-header">
+    <div class="container header-inner">
+      <!-- Logo -->
+      <a href="#hero" class="aurelia-logo">
+        <svg class="logo-icon-svg" viewBox="0 0 24 24">
+          <path d="M12 2C12 2 14 7 18 9C14 10.5 12 16 12 16C12 16 10 10.5 6 9C10 7 12 2 12 2Z"/>
+          <path d="M12 16C12 16 13.5 19 16 20C13.5 21 12 23 12 23C12 23 10.5 21 8 20C10.5 19 12 16 12 16Z" opacity="0.6"/>
+          <circle cx="5" cy="15" r="1.5"/>
+          <circle cx="19" cy="15" r="1.5"/>
+        </svg>
+        <span class="aurelia-brand-name">A U R È L I A</span>
+        <span class="aurelia-brand-sub">EVENTS & PROPS</span>
+      </a>
+
+      <!-- Center Nav Links (Desktop) -->
+      <nav class="desktop-nav-wrap">
+        <ul class="aurelia-nav-menu">
+          <li><a href="#hero" class="aurelia-nav-link active">Home</a></li>
+          <li><a href="#services" class="aurelia-nav-link">Our Services</a></li>
+          <li><a href="#about" class="aurelia-nav-link">About Us</a></li>
+          <li><a href="#process" class="aurelia-nav-link">How It Works</a></li>
+          <li><a href="#spotlight" class="aurelia-nav-link">Spotlight</a></li>
+          <li><a href="#gallery" class="aurelia-nav-link">Gallery</a></li>
+          <li><a href="#contact-cta" class="aurelia-nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="header-right-actions">
+        <button class="btn-header-quote-aurelia" onclick="app.openQuoteDrawer()">
+          <span>Get Quote</span>
+          <span>&rarr;</span>
+          <span id="cart-badge" style="background: var(--bg-emerald-deep); color: #fff; font-size: 0.72rem; padding: 2px 7px; border-radius: 9999px; margin-left: 4px;">0</span>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-hamburger-btn" onclick="toggleMobileNav()" aria-label="Toggle Mobile Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-Down Navigation Menu -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+      <ul class="mobile-nav-list">
+        <li><a href="#hero" onclick="toggleMobileNav()">Home</a></li>
+        <li><a href="#services" onclick="toggleMobileNav()">Our Services</a></li>
+        <li><a href="#about" onclick="toggleMobileNav()">About Us</a></li>
+        <li><a href="#process" onclick="toggleMobileNav()">How It Works</a></li>
+        <li><a href="#spotlight" onclick="toggleMobileNav()">Spotlight</a></li>
+        <li><a href="#gallery" onclick="toggleMobileNav()">Gallery</a></li>
+        <li><a href="#contact-cta" onclick="toggleMobileNav()">Contact Us</a></li>
+      </ul>
+      <button class="btn-terracotta-pill" onclick="toggleMobileNav(); app.openQuoteDrawer();" style="width: 100%; justify-content: center; margin-top: 16px;">
+        <span>Build Your Quote &rarr;</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 3. Hero Section Sliding Banners -->
+  <section id="hero" class="hero-banners-section">
+    <div class="hero-slider-container">
+      <div class="hero-slides-wrapper" id="hero-slider">
+        <div class="hero-image-slide active" data-index="0">
+          <img src="images/Hero Section/Banner1.png" alt="Aurèlia Event Props Banner 1" />
+        </div>
+        <div class="hero-image-slide" data-index="1">
+          <img src="images/Hero Section/Banner2.png" alt="Aurèlia Event Props Banner 2" />
+        </div>
+        <div class="hero-image-slide" data-index="2">
+          <img src="images/Hero Section/Banner3.png" alt="Aurèlia Event Props Banner 3" />
+        </div>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button class="hero-slide-nav prev" onclick="prevHeroSlide()" aria-label="Previous Slide">
+        <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+      </button>
+      <button class="hero-slide-nav next" onclick="nextHeroSlide()" aria-label="Next Slide">
+        <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+
+      <!-- Pagination Indicators -->
+      <div class="hero-slide-indicators">
+        <button class="slide-dot active" onclick="goToHeroSlide(0)" aria-label="Go to Slide 1"></button>
+        <button class="slide-dot" onclick="goToHeroSlide(1)" aria-label="Go to Slide 2"></button>
+        <button class="slide-dot" onclick="goToHeroSlide(2)" aria-label="Go to Slide 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Top Feature Trust Badges Bar (4 Clean Horizontal Cards) -->
+  <section class="trust-features-bar">
+    <div class="container trust-features-container">
+      
+      <!-- Feature 1 -->
+      <div class="trust-feat-item">
+        <div class="trust-feat-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+        </div>
+        <div class="trust-feat-content">
+          <h4 class="trust-feat-title">PAN INDIA DELIVERY</h4>
+          <p class="trust-feat-sub">Across 500+ venues</p>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="trust-feat-item">
+        <div class="trust-feat-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        </div>
+        <div class="trust-feat-content">
+          <h4 class="trust-feat-title">PREMIUM QUALITY</h4>
+          <p class="trust-feat-sub">Carefully sanitized</p>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="trust-feat-item">
+        <div class="trust-feat-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+        </div>
+        <div class="trust-feat-content">
+          <h4 class="trust-feat-title">HASSLE-FREE BOOKING</h4>
+          <p class="trust-feat-sub">Lock &amp; pay online</p>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="trust-feat-item">
+        <div class="trust-feat-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 1a9 9 0 0 0-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7a9 9 0 0 0-9-9z"/></svg>
+        </div>
+        <div class="trust-feat-content">
+          <h4 class="trust-feat-title">24/7 SUPPORT</h4>
+          <p class="trust-feat-sub">Dedicated expert ops</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. "OUR SERVICES" SECTION (Split Hero Header + 6 Arched Capsules) -->
+  <section id="services" class="services-curated-section">
+    <!-- Background Botanical Branch SVG -->
+    <svg class="botanical-branch-bg" viewBox="0 0 160 140" fill="none">
+      <path d="M10 130 C 50 110 80 70 120 10" stroke="#C4975A" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+      <path d="M35 110 C 20 95 30 75 50 85 C 45 105 40 110 35 110 Z" fill="#C4975A" opacity="0.2"/>
+      <path d="M70 75 C 60 55 75 40 95 55 C 85 75 75 75 70 75 Z" fill="#C4975A" opacity="0.2"/>
+      <path d="M95 40 C 110 20 130 30 120 50 C 105 50 98 42 95 40 Z" fill="#C4975A" opacity="0.25"/>
+    </svg>
+
+    <div class="container">
+      
+      <!-- Top Split: Title Left & Right Hero Grand Setup Frame -->
+      <div class="services-top-split">
+        <div class="services-title-col">
+          <span class="eyebrow-pill-tag">OUR SERVICES</span>
+          <h2 class="services-headline">Everything You Need<br><em>for a</em> Perfect Celebration</h2>
+          <p class="services-sub-desc">
+            From breathtaking decor to unforgettable experiences, we bring your vision to life with elegance and creativity.
+          </p>
+          <a href="#gallery" class="services-explore-link">
+            <span>EXPLORE ALL SERVICES</span>
+            <span class="arrow-glyph">&rarr;</span>
+          </a>
+        </div>
+
+        <!-- Right Side Arched Feature Image with Overlapping Round Badge -->
+        <div class="services-hero-image-wrap">
+          <div class="services-hero-arch-frame">
+            <img src="images/products/ChatGPT Image Sep 8, 2026, 03_12_28 PM.png" alt="Grand Banquet Tent & Warm Lighting Setup" />
+          </div>
+          <!-- Overlapping Cream Badge -->
+          <div class="services-hero-badge">
+            <svg class="badge-flower" viewBox="0 0 24 24"><path d="M12 2l2.4 5.6L20 9.2l-4.4 4 1.2 6-4.8-3-4.8 3 1.2-6-4.4-4 5.6-1.6z" fill="#C4975A"/></svg>
+            <span class="badge-text">CELEBRATE<br>BEAUTIFUL<br>MOMENTS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sliding Carousel Header Controls & View All -->
+      <div class="services-carousel-header">
+        <div class="services-carousel-title-group">
+          <span class="carousel-counter-tag" id="services-counter">01 / 12</span>
+        </div>
+        <div class="services-carousel-controls">
+          <button class="services-nav-btn prev" onclick="prevServicesSlide()" aria-label="Previous products">
+            <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+          </button>
+          <button class="services-nav-btn next" onclick="nextServicesSlide()" aria-label="Next products">
+            <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Sliding Arched Products Track -->
+      <div class="services-slider-viewport">
+        <div class="services-slider-track" id="services-products-slider">
+          <!-- Dynamically populated or static fallback from PRODUCTS_DATA -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. "ABOUT US / TURNING MOMENTS INTO TIMELESS MEMORIES" SECTION -->
+  <section id="about" class="about-moments-section">
+    <div class="container about-moments-grid">
+      
+      <!-- Left: Deep Emerald Card with Scalloped Curved Cutout & Stats Grid -->
+      <div class="about-emerald-content">
+        <span class="about-eyebrow">ABOUT US</span>
+        <h2 class="about-headline">Turning Moments<br>into <em>Timeless Memories</em></h2>
+        <p class="about-desc">
+          We are passionate about creating beautiful, meaningful and unforgettable event experiences. With a keen eye for detail and a taste for aesthetics, we bring creativity, quality and seamless execution to every celebration.
+        </p>
+
+        <a href="#process" class="btn-about-story">
+          <span>OUR STORY</span>
+          <span class="arrow-glyph">&rarr;</span>
+        </a>
+
+        <!-- 4 Metric Counters -->
+        <div class="about-metrics-row">
+          <div class="metric-item">
+            <span class="metric-number">500+</span>
+            <span class="metric-label">Events Curated</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">98%</span>
+            <span class="metric-label">Happy Clients</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">50+</span>
+            <span class="metric-label">Unique Themes</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">4.9 ★</span>
+            <span class="metric-label">Average Rating</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Warm Candlelit Dining Photo with Floating Center Seal -->
+      <div class="about-visual-side">
+        <div class="about-photo-wrapper">
+          <img src="images/products/ChatGPT Image Sep 8, 2026, 03_16_52 PM.png" alt="Candlelit Banquet Wedding Table Setup" />
+        </div>
+        
+        <!-- Overlapping Center Round Seal Badge -->
+        <div class="about-round-seal">
+          <svg class="seal-flower-icon" viewBox="0 0 24 24"><path d="M12 2C12 2 14 7 18 9C14 10.5 12 16 12 16C12 16 10 10.5 6 9C10 7 12 2 12 2Z" fill="#C4975A"/></svg>
+          <div class="seal-text-inner">
+            <span>MEMORIES</span>
+            <span>THAT LAST</span>
+            <span>FOREVER</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. "HOW IT WORKS / OUR SIMPLE PROCESS" SECTION -->
+  <section id="process" class="process-steps-section">
+    <div class="container">
+      <div class="process-header">
+        <span class="process-eyebrow">HOW IT WORKS</span>
+        <h2 class="process-title">Our Simple Process</h2>
+        <p class="process-subtitle">From vision to celebration, we make it effortless for you.</p>
+      </div>
+
+      <!-- 4 Connected Steps Flow with Wavy Curving Line -->
+      <div class="process-steps-timeline">
+        <div class="process-wave-line">
+          <svg viewBox="0 0 900 60" fill="none" preserveAspectRatio="none">
+            <path d="M 50,30 Q 175,5 300,30 T 550,30 T 800,30" stroke="#DFD5C6" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+          </svg>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="process-step-node">
+          <div class="step-num-pill">01</div>
+          <div class="step-circle-icon">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          </div>
+          <h3 class="step-name">Explore</h3>
+          <p class="step-desc">Browse our collections and get inspired.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-step-node">
+          <div class="step-num-pill">02</div>
+          <div class="step-circle-icon">
+            <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+          </div>
+          <h3 class="step-name">Book</h3>
+          <p class="step-desc">Select your date and customize.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-step-node">
+          <div class="step-num-pill">03</div>
+          <div class="step-circle-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 8l-8 5-8-5V6l8 5 8-5v2zm0-4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z"/></svg>
+          </div>
+          <h3 class="step-name">We Deliver</h3>
+          <p class="step-desc">On time, with perfection.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-step-node">
+          <div class="step-num-pill">04</div>
+          <div class="step-circle-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <h3 class="step-name">Celebrate</h3>
+          <p class="step-desc">Sit back and make memories.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. "SIGNATURE MOMENTS / SPOTLIGHT SHOWCASE" SECTION (Ambient Backdrop + All Products Sliding Arches) -->
+  <section id="spotlight" class="gallery-celebrations-section">
+    <!-- Luxury Backdrop Image Layer with Ambient Vignette Overlay -->
+    <div class="gallery-bg-backdrop-layer">
+      <img src="images/products/ChatGPT Image Sep 8, 2026, 03_12_28 PM.png" alt="Atmospheric Venue Backdrop" class="gallery-bg-img" />
+      <div class="gallery-bg-overlay"></div>
+    </div>
+
+    <!-- Gold Botanical Branch Overlay Decor -->
+    <svg class="gallery-botanical-decor" viewBox="0 0 160 160" fill="none">
+      <path d="M20 140 C 60 120 90 80 130 20" stroke="#C4975A" stroke-width="1.2" stroke-linecap="round" opacity="0.35"/>
+      <path d="M45 120 C 30 105 40 85 60 95 C 55 115 50 120 45 120 Z" fill="#C4975A" opacity="0.18"/>
+      <path d="M80 85 C 70 65 85 50 105 65 C 95 85 85 85 80 85 Z" fill="#C4975A" opacity="0.2"/>
+      <path d="M105 50 C 120 30 140 40 130 60 C 115 60 108 52 105 50 Z" fill="#C4975A" opacity="0.22"/>
+    </svg>
+
+    <div class="container gallery-grid-layout">
+      
+      <!-- Left Column: Title, CTA, and Carousel Slider Arrows -->
+      <div class="gallery-left-content">
+        <span class="gallery-eyebrow">SPOTLIGHT SHOWCASE</span>
+        <h2 class="gallery-title">Signature Moments<br><em>&amp; Real Setups</em></h2>
+        
+        <a href="javascript:void(0)" onclick="openLightbox(0)" class="btn-gallery-cta">
+          <span>VIEW FULLSCREEN</span>
+          <span class="arrow-glyph">&rarr;</span>
+        </a>
+
+        <!-- Controls / Nav Row -->
+        <div class="gallery-controls-row">
+          <button class="gallery-nav-circle" onclick="prevGallerySlide()" aria-label="Previous setups">&larr;</button>
+          <button class="gallery-nav-circle" onclick="nextGallerySlide()" aria-label="Next setups">&rarr;</button>
+          <span class="gallery-counter" id="gallery-counter">01 / 10</span>
+        </div>
+      </div>
+
+      <!-- Right Column: Sliding All Products Arched Cards -->
+      <div class="gallery-arches-viewport">
+        <div class="gallery-arches-row" id="gallery-arches-track">
+          <!-- Dynamically populated with all products and click-to-lightbox triggers -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 9. DEDICATED EVENT PROPS & SETUPS GALLERY SECTION -->
+  <section id="gallery" class="dedicated-gallery-section">
+    <div class="container">
+      <div class="dedicated-gallery-header">
+        <span class="gallery-eyebrow-dark">CURATED PORTFOLIO</span>
+        <h2 class="dedicated-gallery-title">Event Props &amp; Setups Gallery</h2>
+        <div class="gold-filigree-emblem">
+          <svg viewBox="0 0 60 20"><path d="M30 2 C 26 8 20 12 10 12 C 20 12 26 16 30 18 C 34 16 40 12 50 12 C 40 12 34 8 30 2 Z" fill="#C4975A" opacity="0.8"/><circle cx="30" cy="10" r="2.5" fill="#C4975A"/></svg>
+        </div>
+        <p class="dedicated-gallery-subtitle">Click any setup below to inspect high-definition details &amp; quick quote booking.</p>
+
+        <!-- Category Filter Pills -->
+        <div class="gallery-filter-tabs-row" id="gallery-filter-tabs">
+          <button class="gallery-filter-btn active" onclick="app.filterGalleryCategory('all', this)">All Setups</button>
+          <button class="gallery-filter-btn" onclick="app.filterGalleryCategory('decor-backdrops', this)">Decor &amp; Arches</button>
+          <button class="gallery-filter-btn" onclick="app.filterGalleryCategory('photo-booth', this)">Photo Booths</button>
+          <button class="gallery-filter-btn" onclick="app.filterGalleryCategory('cold-pyro', this)">Special Effects</button>
+          <button class="gallery-filter-btn" onclick="app.filterGalleryCategory('props-signage', this)">Props &amp; Neon</button>
+          <button class="gallery-filter-btn" onclick="app.filterGalleryCategory('lounge-seating', this)">VIP Lounge</button>
+        </div>
+      </div>
+
+      <!-- Gallery Grid of All Products -->
+      <div class="dedicated-gallery-grid" id="dedicated-gallery-grid">
+        <!-- Dynamically rendered from PRODUCTS_DATA -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. "GET A FREE CONSULTATION / LET'S CREATE SOMETHING BEAUTIFUL" SECTION (Warm Cream Banner with Cursive Script & Arch Card) -->
+  <section id="contact-cta" class="consultation-banner-section">
+    <div class="container consultation-inner-grid">
+      
+      <!-- Left: Big Cursive Script Lettering with Hand-Drawn Heart -->
+      <div class="consultation-script-side">
+        <div class="cursive-big-statement">
+          Let's Create<br>Something Beautiful<br>Together
+        </div>
+        <div class="hand-drawn-heart">♡</div>
+      </div>
+
+      <!-- Center-Right: Arched Pill Consultation Box -->
+      <div class="consultation-box-wrap">
+        <div class="consultation-arch-card">
+          <span class="consult-tag">READY TO PLAN YOUR EVENT?</span>
+          <h2 class="consult-title">Get a Free Consultation</h2>
+          <p class="consult-desc">Share your ideas with us and we'll take care of the rest.</p>
+          <button class="btn-consult-emerald" onclick="app.openQuoteDrawer()">
+            <span>ENQUIRE NOW</span>
+            <span class="arrow-glyph">&rarr;</span>
+          </button>
+        </div>
+
+        <!-- Overlapping Cream Circle Stamp Badge -->
+        <div class="consultation-stamp-seal">
+          <span class="stamp-line-1">DREAM</span>
+          <span class="stamp-line-2">PLAN</span>
+          <span class="stamp-line-3">CELEBRATE</span>
+          <span class="stamp-line-4">REPEAT</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 11. Minimal Luxury Footer -->
+  <footer class="aurelia-footer">
+    <div class="container footer-bar-inner">
+      <div class="footer-brand-aurelia">
+        <div class="aurelia-brand-name">A U R È L I A</div>
+        <div style="font-size: 0.55rem; letter-spacing: 2.5px; color: var(--text-dark-muted); text-transform: uppercase;">EVENTS & PROPS &copy; 2026</div>
+      </div>
+
+      <ul class="footer-nav-menu">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#spotlight">Spotlight</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="javascript:void(0)" onclick="app.openQuoteDrawer()">Get Quote</a></li>
+      </ul>
+
+      <div class="footer-social-icons">
+        <a href="#" aria-label="Website"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="Pinterest"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M8 12c0-2.2 1.8-4 4-4s4 1.8 4 4c0 2-1.4 3.7-3.3 3.9-.3 0-.6-.2-.6-.5l.5-2c.2-.7 0-1.4-.4-1.9-.5-.6-1.4-.6-1.9 0-.6.7-.5 1.8.2 2.3l-.9 3.8c-.2.7-.8 1.4-1.2 1.9C9 18.5 8 15.5 8 12z" fill="#FFF"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-out Quote Builder Drawer -->
+  <div class="drawer-overlay-aurelia" id="drawer-overlay" onclick="app.closeQuoteDrawer()"></div>
+  <aside class="quote-drawer-aurelia" id="quote-drawer-evoria">
+    <div class="drawer-head-aurelia">
+      <div>
+        <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--text-dark);">Your Rental Quote</h3>
+        <span style="font-size: 0.72rem; color: var(--text-dark-muted); text-transform: uppercase; letter-spacing: 1px;">AURÈLIA EVENTS & PROPS</span>
+      </div>
+      <button onclick="app.closeQuoteDrawer()" style="background:none; border:none; font-size: 1.6rem; cursor:pointer;">&times;</button>
+    </div>
+
+    <div class="drawer-body-aurelia">
+      <div id="drawer-items-list"></div>
+
+      <!-- Date & Location -->
+      <div style="padding: 16px; background: #FFFFFF; border-radius: 12px; border: 1px solid var(--border-cream);">
+        <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-dark); display: block; margin-bottom: 6px;">EVENT DATE</label>
+        <input type="date" id="evoria-event-date" style="width: 100%; padding: 10px; border: 1px solid var(--border-cream); border-radius: 8px; font-family: var(--font-sans); margin-bottom: 12px;" />
+
+        <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-dark); display: block; margin-bottom: 6px;">EVENT CITY / VENUE</label>
+        <input type="text" id="evoria-event-city" placeholder="e.g. Grand Ballroom, Delhi" style="width: 100%; padding: 10px; border: 1px solid var(--border-cream); border-radius: 8px; font-family: var(--font-sans);" />
+      </div>
+
+      <!-- Technician Toggle -->
+      <div style="padding: 16px; background: #FFFFFF; border-radius: 12px; border: 1px solid var(--border-cream);">
+        <label style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
+          <div>
+            <strong style="font-size: 0.88rem; color: var(--text-dark); display: block;">Include On-Site Technician</strong>
+            <span style="font-size: 0.75rem; color: var(--text-dark-muted);">Delivery, setup & cue firing (+₹2,500)</span>
+          </div>
+          <input type="checkbox" id="evoria-tech-check" checked onchange="app.toggleTechnician(this.checked)" style="width: 18px; height: 18px; accent-color: var(--color-terracotta);" />
+        </label>
+      </div>
+    </div>
+
+    <div class="drawer-foot-aurelia" id="drawer-summary-area">
+      <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-dark-muted);">
+        <span>Equipment Subtotal:</span>
+        <span id="summary-equip-val">₹0</span>
+      </div>
+      <div style="display: flex; justify-content: space-between; font-family: var(--font-serif); font-size: 1.4rem; font-weight: 600; color: var(--text-dark); padding-top: 8px; border-top: 1px solid var(--border-cream);">
+        <span>Estimated Total:</span>
+        <span id="summary-grand-val">₹0</span>
+      </div>
+      <button class="btn-terracotta-pill" onclick="app.sendWhatsAppQuote()" style="width: 100%; justify-content: center;">
+        <span>Confirm on WhatsApp &rarr;</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Fullscreen Lightbox Modal for Spotlight Showcase & Gallery -->
+  <div id="gallery-lightbox-modal" class="lightbox-modal">
+    <button class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Close Lightbox">&times;</button>
+    <button class="lightbox-arrow-btn prev" onclick="prevLightboxSlide()" aria-label="Previous Image">&#10094;</button>
+    <button class="lightbox-arrow-btn next" onclick="nextLightboxSlide()" aria-label="Next Image">&#10095;</button>
+    
+    <div class="lightbox-content-wrap">
+      <img id="lightbox-main-img" src="" alt="Full Showcase View" />
+      <div class="lightbox-details-box">
+        <span class="lightbox-cat" id="lightbox-item-cat">Decor &amp; Backdrops</span>
+        <h3 class="lightbox-title" id="lightbox-item-title">Product Name</h3>
+        <p class="lightbox-desc" id="lightbox-item-desc">Product description and specs.</p>
+        <div class="lightbox-action-row">
+          <span class="lightbox-price" id="lightbox-item-price">₹0</span>
+          <button class="btn-header-quote-aurelia" onclick="addCurrentLightboxToQuote()">
+            <span>Add to Quote &rarr;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data/products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
