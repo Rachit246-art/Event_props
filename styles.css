@@ -4350,3 +4350,55 @@ em {
 
 
 
+
+/* ==========================================================================
+   FOOTER CREDIT BRANDING
+   ========================================================================== */
+.footer-credit-container {
+  border-top: 1px solid var(--border-cream, rgba(0, 0, 0, 0.08));
+  margin-top: 24px;
+  padding-top: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-credit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  color: var(--text-dark-muted, #6B625B);
+  font-family: inherit;
+}
+
+.footer-credit .credit-brand {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-dark, #1A1614);
+  text-transform: uppercase;
+}
+
+.footer-credit .credit-divider {
+  color: var(--border-cream-dark, rgba(0, 0, 0, 0.25));
+  font-weight: 300;
+  margin: 0 4px;
+}
+
+.footer-credit .credit-text {
+  color: var(--text-dark-muted, #6B625B);
+}
+
+.footer-credit .credit-heart {
+  color: #ff3366;
+  display: inline-block;
+  margin: 0 3px;
+  transform: scale(1.05);
+}
+
+.footer-credit .credit-author {
+  color: var(--text-dark, #1A1614);
+  font-weight: 600;
+}
